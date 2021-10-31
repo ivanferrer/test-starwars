@@ -15,4 +15,5 @@ export interface People {
     created?: string;
     edited?: string;
     url?: string;
+    hide?: boolean;
 }

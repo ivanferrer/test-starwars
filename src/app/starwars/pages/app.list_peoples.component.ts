@@ -56,6 +56,8 @@ export class AppListPeoplesComponent implements OnInit {
 
     dialogTitleDetail: string;
 
+    isHiddenAttributes: boolean;
+
     constructor(private peopleService: PeopleService, 
                 private messageService: MessageService,
                 private confirmationService: ConfirmationService, 
@@ -96,21 +98,8 @@ export class AppListPeoplesComponent implements OnInit {
             { field: 'height', header: 'Medida' },
         ];
 
-        this.genderOptions = [
-            {label:'Masculino', value:'male'},
-            {label:'Feminino', value:'female'}
-        ]
     }
 
-    openNew() {
-        this.dialogTitle = 'Cadastrar Pessoa';
-        this.people = {};
-        this.submitted = false;
-        this.displayDialog = true;
-        this.typeModal = 'new';
-       }
-
-    
     detailsPeople(people: People) {
         this.dialogTitleDetail = 'Detalhes da Pessoa';
         this.typeModal = 'detail';
@@ -118,41 +107,20 @@ export class AppListPeoplesComponent implements OnInit {
         this.peopleDetails = true;
     }
 
-    // edit(people: People) {
+    toggleAttributes() {
 
-    //     if (people.id) {
-            
-        
-    //     } else {           
-    //         this.openNew();
-    //     }
-    // }
-
-    // deletePeople(people: People) {
-    //     this.confirmationService.confirm({
-    //         message: 'Você gostaria de remover esta pessoa?',
-    //         header: 'Exclusão de pessoa',
-    //         icon: 'pi pi-exclamation-triangle',
-    //         accept: () => {
-    //             this.peopleService.deletePeople(people)
-    //             .then(res => {
-    //                 this.peoples = this.peoples.filter(val => val.id !== people.id);
-    //                 this.people = {};
-    //                  this.messageService.add({severity: 'success', summary: 'Sucesso', detail: 'Pessoa Removida', life: 3000});
-    //                 })
-    //                 .catch(err => {
-    //                     console.log(err)
-    //                 })
-    //         }
-    //     });
-    // }
-
-
-    hideDialog() {
-        this.displayDialog = false;
-        this.submitted = false;
+        this.isHiddenAttributes = !this.isHiddenAttributes;
+        this.peoples.map(
+            val => {
+                if(this.selectedPeoples.includes(val)) {
+                   val.hide = this.isHiddenAttributes; 
+                } else {
+                   val.hide= false;
+                }
+            });
+            this.peoples = [...this.peoples];
     }
-    
+
     hideDialogDetails() {
         this.peopleDetails = false;
         this.submitted = false;
@@ -162,7 +130,6 @@ export class AppListPeoplesComponent implements OnInit {
   
     }
 
- 
     findIndexById(id: number): number {
         let index = -1;
         for (let i = 0; i < this.peoples.length; i++) {
@@ -174,18 +141,5 @@ export class AppListPeoplesComponent implements OnInit {
 
         return index;
     }
-
-    findIndexByFilms(id: number): number {
-        let index = -1;
-        for (let i = 0; i <this.films.length; i++) {
-            if (this.films[i].id === id) {
-                index = i;
-                break;
-            }
-        }
-
-        return index;
-    }
-  
 
 }

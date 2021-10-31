@@ -4,6 +4,12 @@
 		<p-toast></p-toast>
 
 		<div class="card">
+			<p-toolbar styleClass="p-mb-4">
+				<ng-template pTemplate="left">
+					<button pButton pRipple label="Esconder / mostrar Atributos" icon="pi {{isHiddenAttributes == true ? 'pi-lock' : 'pi-lock-open'}}" class="p-button-danger p-mb-2" (click)="toggleAttributes()" [disabled]="!selectedPeoples || !selectedPeoples.length"></button>
+				</ng-template>
+
+			</p-toolbar>
 			<div class="loader-wrapper-spinner" *ngIf="isLoading">
 				<i class="loading" style="font-size: 2rem"></i>
 			</div>
@@ -21,7 +27,11 @@
 					</div>
 				</ng-template>
 				<ng-template pTemplate="header">
+				
 					<tr>
+						<th style="width: 3rem">
+							<p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+						</th>
 						<th pSortableColumn="name">Nome<p-sortIcon field="name"></p-sortIcon></th>
 						<th pSortableColumn="height">Medida<p-sortIcon field="height"></p-sortIcon></th>
 						<th pSortableColumn="mass">Massa<p-sortIcon field="mass"></p-sortIcon></th>
@@ -32,21 +42,24 @@
 				</ng-template>
 				<ng-template pTemplate="body" let-people>
 					<tr>
-						<td><span class="p-column-title"></span>
-							{{people.name}}
+						<td>
+							<p-tableCheckbox [value]="people"></p-tableCheckbox>
 						</td>
 						<td><span class="p-column-title"></span>
-							{{people.height}}
+							{{(people.hide) ? '...' : people.name}}
 						</td>
 						<td><span class="p-column-title"></span>
-							{{people.mass}}
+							{{(people.hide) ? '...' : people.height}}
+						</td>
+						<td><span class="p-column-title"></span>
+							{{(people.hide) ? '...' : people.mass}}
 						</td>
 					
 						<td><span class="p-column-title"></span>
-							{{people.created | date: 'dd/mm/yyyy'}}
+							{{(people.hide) ? '...' : (people.created | date: 'dd/mm/yyyy')}}
 						</td>
 						<td><span class="p-column-title"></span>
-							{{people.edited | date: 'dd/mm/yyyy'}}
+							{{(people.hide) ? '...' : (people.edited | date: 'dd/mm/yyyy')}}
 						</td>
 						<td>
 							<div class="actions-buttons">

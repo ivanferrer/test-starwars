@@ -90,7 +90,7 @@ export class AppListPeoplesComponent implements OnInit {
         this.peopleService.getPeoples()
         .then(data => { 
             this.isLoading = false;
-            this.peoples = data || []
+            this.peoples = this.formatDate(data || []);
         });
    
         this.cols = [
@@ -98,6 +98,15 @@ export class AppListPeoplesComponent implements OnInit {
             { field: 'height', header: 'Medida' },
         ];
 
+    }
+
+    formatDate(data) {
+        data.map(res => {
+            res.created = res.created.split('T')[0];
+            res.edited = res.edited.split('T')[0];
+            return res;
+        });
+        return data;
     }
 
     detailsPeople(people: People) {

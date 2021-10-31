@@ -34,7 +34,7 @@
 						</th>
 						<th pSortableColumn="name">Nome<p-sortIcon field="name"></p-sortIcon></th>
 						<th pSortableColumn="height">Medida<p-sortIcon field="height"></p-sortIcon></th>
-						<th pSortableColumn="mass">Massa<p-sortIcon field="mass"></p-sortIcon></th>
+						<th pSortableColumn="mass">Peso<p-sortIcon field="mass"></p-sortIcon></th>
 						<th pSortableColumn="created">Data de Cadastro <p-sortIcon field="created"></p-sortIcon></th>
 						<th pSortableColumn="edited">Última Atualização <p-sortIcon field="edited"></p-sortIcon></th>
 						<th></th>
@@ -49,10 +49,10 @@
 							{{(people.hide) ? '...' : people.name}}
 						</td>
 						<td><span class="p-column-title"></span>
-							{{(people.hide) ? '...' : people.height}}
+							{{(people.hide) ? '...' : people.height + ' metros'}}
 						</td>
 						<td><span class="p-column-title"></span>
-							{{(people.hide) ? '...' : people.mass}}
+							{{(people.hide) ? '...' : people.mass + ' kg' }}
 						</td>
 					
 						<td><span class="p-column-title"></span>
@@ -82,7 +82,8 @@
 						<div class="bg-gedi"></div>
 						<div class="details">
 						    <p><span>Nome:</span> {{people.name}}</p>
-						    <p><span>Medida (metros):</span> {{people.height}}</p>
+						    <p><span>Altura:</span> {{people.height}} metros</p>
+						    <p><span>Peso:</span> {{people.mass}} kg</p>
 						    <p><span>Criação:</span> {{people.created | date: 'dd/mm/yyyy'}}</p>						
 						    <p><span>Edição:</span> {{people.edited | date: 'dd/mm/yyyy'}}</p>						
 					    </div>

@@ -1,0 +1,434 @@
+/****
+DEFAULT OVERRIDE THEME :: LAYOUT-LIGHTGREEN :: layout ROS 
+***/
+.p-button.p-button-secondary, .p-buttonset.p-button-secondary > .p-button, .p-splitbutton.p-button-secondary > .p-button {
+    background-color: #75787B !important;
+  }
+  
+  /*Mudando a cor do p-button-info para uma cor da petro*/
+  .p-button.p-button-info, .p-buttonset.p-button-info > .p-button, .p-splitbutton.p-button-info > .p-button {
+    //color: #ffffff;
+    background-color: #3DDAFF !important;
+    //background: #75787B;
+    //border: 1px solid #75787B;
+  }
+
+  .layout-topbar {
+    min-height: 120px;
+}
+.layout-topbar-logo {
+    background: white;
+    padding: 10px;
+    position: relative;
+    top: 0;
+    border-radius: 0 0 10px 10px;
+}
+.layout-topbar .layout-topbar-logo {
+    padding: 12px;
+    background: black;
+}
+.layout-wrapper {
+    padding: 0 50px 25px;
+    border-radius: 0 0 10px 10px;
+}
+.pi.pi-user.icon.avatar {
+   &::before {
+        color: #b7c7af;
+    }
+    background: white;
+    border-radius: 100%;
+    padding: 6px;
+    font-size: 30px;
+    &.dropdown {
+        float: left;
+        padding-top: 8px;
+    }
+}
+.layout-topbar .layout-topbar-menu > li.user-profile > ul > li.profile-detail {
+    border-bottom: 1px dotted #ccc;
+}
+
+.background-wellcome {
+    background: url(../images/luta.jpg) center center no-repeat;
+    width: 100%;
+    min-height: 740px;
+    background-size: cover;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0px 10px 40px rgb(255 212 0 / 66%);
+    border: 2px solid #fff;
+}
+
+.layout-wrapper .layout-content.home {
+    padding: 0;
+    border-radius: 0 0 10px 10px;
+}
+.layout-actionbar {
+    border-radius: 0 10px 0 0;
+}
+.layout-actionbar {
+    min-height: 52px;
+}
+.separe-breadcrumb {
+    color: #75787B;
+    font-size: 11px;
+    position: relative;
+    top: 0.02em;
+    padding: 0 4px;
+}
+
+.cad-empresa.p-dialog .p-dialog-content {
+    background: #ffffff;
+    color: #495057;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+}
+// .cad-servico.p-dialog .p-dialog-content {
+//     background: #ffffff;
+//     color: #495057;
+//     padding: 0 1.5rem 15rem 1.5rem;
+// }
+.p-invalid {
+    color: rgb(112, 4, 4);
+    display: block;
+}
+
+.actions-buttons {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.red-icon {
+    font-size: 11px;
+    color: brown;
+    padding:0 10px 0 0;
+}
+.soldado {
+    position: relative;
+    span {
+        color: #75787B;
+    }
+    font-size: 15px;
+    .divisor {
+        border-bottom: 1px solid #ececec;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .bg-gedi {
+        background: #000000 url(../images/starwars.jpg) no-repeat;
+        position: absolute;
+        width: 190px;
+        height: 130px;
+        background-size: contain;
+        border-radius: 8px;
+        padding: 5px;
+    }
+    .details {
+        margin-left: 208px;
+    }
+} 
+.ferramenta {
+    position: relative;
+    span {
+        color: #75787B;
+    }
+    font-size: 15px;
+    .details {
+        margin-left: 120px;
+    }
+    .divisor {
+        border-bottom: 1px solid #ececec;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .bg-ferramenta {
+        background: url(../images/ferramentas.png) no-repeat;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-size: contain;
+    }
+} 
+.p-datatable .p-datatable-thead > tr > th.contrato {
+    width:25%;
+}
+.p-datatable .p-datatable-thead > tr > th.licitacao {
+   width: 18%;
+}
+.fa-fw {
+    width: 1.28571429em;
+    text-align: center;
+}
+.input-uppercase {
+    text-transform: uppercase;
+}
+.input-uppercase::-webkit-input-placeholder { /* Edge */
+    text-transform: initial;
+}
+
+.input-uppercase:-ms-input-placeholder { /* Internet Explorer 10-11 */
+text-transform: initial;
+}
+
+.input-uppercase::placeholder {
+text-transform: initial;
+}
+button.ghost {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    i {
+        display: block;
+        color: #55b255;
+        font-size: 12px;
+        position: relative;
+        top: 0.05em;
+    }
+}
+.p-tooltip.current-tooltip {
+    top: 134.75px!important;
+}
+.p-tooltip.current-tooltip .p-tooltip-text {
+    min-width: 380px;
+    white-space: inherit;
+    p {
+            margin: 0 0 0.2rem 0;
+            strong {
+                color: lemonchiffon;
+            }
+    }
+}
+.login-body {
+    background: url(../images/pages/petro-bg-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding: 0;
+    height: 100vh;
+}
+.login-body .login-panel {
+    background: radial-gradient(circle at 50% 3%,rgb(243 194 55 / 26%), #0b8245);
+}
+.login-body .login-panel .logo {
+    margin-top: -43px;
+    margin-left: 48px;
+    img {
+        width: 670px;
+    }
+}
+.login-body .login-card .login-content .login-input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.loader-wrapper-spinner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px;
+    i.loading {
+        background: url(../images/loading/loading.svg) no-repeat;
+        background-size: contain;
+        width: 104px;
+        height: 104px;
+    }
+}
+.loader-wrapper-spinner-mini {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+    i.loading {
+        background: url(../images/loading/loading.svg) no-repeat;
+        background-size: contain;
+        width: 28px;
+        height: 28px;
+    }
+}
+.list-file .box {
+    background-color: rgb(245, 255, 245);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 1px -1px #0003, 0 1px 1px 0 #00000024, 0 1px 3px 0 #0000001f;
+    margin: 6px 0;
+    .file-item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 94%;
+        i {
+            margin-right: 5px;
+        }
+    }
+    .delete-action {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+.p-fluid .p-fileupload .p-fileupload-row .p-button {
+    width: 34px;
+    border-radius: 100%;
+}
+.p-fileupload .p-fileupload-row > div:nth-child(2) {
+  width: 95%;
+}
+.p-fileupload .p-fileupload-row > div:first-child {
+    display: none;
+}
+.form-slider {
+    .p-field {
+        label > i {
+            color: #55b255;
+            position: relative;
+            top: 1px;
+        }
+    }
+}
+
+.item-tooltip {
+    cursor: pointer;
+}
+
+.filter-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 270px;
+    background: #f2f2f2;
+    padding: 4px;
+    margin-left: 170px;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 4px;
+    margin: 0 2px 0;
+    flex-direction: row;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    .flex-item {
+        display: flex;
+        width: 50%;
+        min-height: 220px;
+        align-items: center;
+        justify-content: center;
+    }
+    .data-filter {
+       background: rgba(255, 255, 255, 0.3); 
+       border-radius: 10px;
+       padding: 20px;
+       min-width: 80%;
+       color: #495057;
+       box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+    }
+}
+
+.layout-topbar .layout-topbar-menu > li.user-profile > ul > li > a .menu-text .menu-title {
+    display: flex;
+    color: #313842;
+    font-weight: normal;
+    min-height: 35px;
+    align-items: center;
+}
+
+.p-card.form-filter-home {
+    padding: 0;
+    background: white;
+    width: 82%;
+    position: relative;
+    top: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    .p-field > label {
+        min-width:110px;
+    }
+    .p-autocomplete,
+    .p-dropdown {
+        min-width:97.6%;
+    }
+    .p-field-right {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 110px;
+    }
+    .p-button.p-button-success {
+        min-width: 90px;
+    }
+    button:focus-visible {
+        border: none;
+    }
+    .p-dropdown .p-dropdown-trigger {
+        color: #ffffff;
+        background: #8BC34A;
+        border: 1px solid #8bc34a;
+        padding: 0.2rem 0.5rem;
+        font-size: 1rem;
+        transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+        border-radius: 2px;
+        outline: 1px solid #8bc34a;
+        width: 2.25rem;
+        &:hover {
+            background: #7eb63c;
+            color: #ffffff;
+            outline: 1px solid #7eb63c;
+        }
+    }
+    .p-inputtext {
+        color:#6c757d;
+    }
+  
+}
+
+.info-details .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
+    background: #e5ffcb;
+    border: none;
+    color: #50643a;
+    border-bottom:2px #e5ffcb solid;
+}
+.info-details .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link:focus {
+   box-shadow: none;
+}
+.card.info-details {
+    border-radius: 15px;
+}
+.layout-wrapper .layout-menu {
+    margin: 0 0 -1px;
+}
+
+.layout-footer .center {
+    text-align: center;
+
+}
+.layout-wrapper .layout-content {
+    border-radius: 0 0 10px 10px;
+}
+
+@media screen and (min-width: 1400px) {
+    .p-card.form-filter-home {
+        .p-autocomplete,
+        .p-dropdown {
+            min-width:77.6%;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .layout-wrapper.layout-menu-horizontal .layout-menu > li > ul {
+        text-transform: initial;
+        min-width: 280px;
+        max-height: 520px;
+    }
+}

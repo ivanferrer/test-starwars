@@ -1,0 +1,34 @@
+/* Add your customizations of layout here */
+.layout-topbar {
+    min-height: 60px;
+}
+.layout-topbar-logo {
+    background: white;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    border-radius: 0 0 10px 10px;
+}
+.layout-topbar .layout-topbar-logo {
+    padding: 12px;
+    a > h4 {
+        color: #467c27;
+        font-size: 23px;
+        text-align: center;
+        line-height: 23px;
+        font-weight: bold;
+    }
+}
+.layout-wrapper {
+    padding: 0 50px 25px;
+}
+.pi.pi-user.icon.avatar {
+   &::before {
+        color: #b7c7af;
+    }
+    background: white;
+    border-radius: 100%;
+    padding: 6px;
+    font-size: 30px;
+}
+

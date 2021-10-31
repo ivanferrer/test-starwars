@@ -1,0 +1,14 @@
+<div class="layout-actionbar">
+    <div class="layout-breadcrumb">
+        <div class="route-bar-breadcrumb">
+            <ng-template ngFor let-item let-last="last" [ngForOf]="items">
+                <span>
+                    <ng-container *ngIf="!item.routerLink">{{item.label}}</ng-container>
+                    <span *ngIf="!last"> <i class="pi pi-angle-right separe-breadcrumb"></i> </span>
+                </span>
+            </ng-template>
+        </div>
+    </div>
+    <div class="layout-actions">
+    </div>
+</div>

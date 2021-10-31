@@ -1,0 +1,85 @@
+<div class="p-grid">
+	<div class="p-col-12">
+
+		<p-toast></p-toast>
+
+		<div class="card">
+			<div class="loader-wrapper-spinner" *ngIf="isLoading">
+				<i class="loading" style="font-size: 2rem"></i>
+			</div>
+			<p-table *ngIf="!isLoading" #dt [value]="peoples" [columns]="cols" [rows]="10" [paginator]="true" [globalFilterFields]="['name']"
+					 [(selection)]="selectedPeoples" [rowHover]="true" dataKey="name"
+					 styleClass="p-datatable-peoples"
+					 currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} registros." [showCurrentPageReport]="true">
+				<ng-template pTemplate="caption">
+					<div class="p-d-flex p-flex-column p-flex-md-row p-jc-md-between table-header">
+						<h5 class="p-m-0">Gerenciar frota estrelar</h5>
+						<span class="p-input-icon-left">
+                        <i class="pi pi-search"></i>
+                        <input pInputText type="text" (input)="dt.filterGlobal($event.target.value, 'contains')" placeholder="Pesquisar..." />
+                    </span>
+					</div>
+				</ng-template>
+				<ng-template pTemplate="header">
+					<tr>
+						<th pSortableColumn="name">Nome<p-sortIcon field="name"></p-sortIcon></th>
+						<th pSortableColumn="height">Medida<p-sortIcon field="height"></p-sortIcon></th>
+						<th pSortableColumn="mass">Massa<p-sortIcon field="mass"></p-sortIcon></th>
+						<th pSortableColumn="created">Data de Cadastro <p-sortIcon field="created"></p-sortIcon></th>
+						<th pSortableColumn="edited">Última Atualização <p-sortIcon field="edited"></p-sortIcon></th>
+						<th></th>
+					</tr>
+				</ng-template>
+				<ng-template pTemplate="body" let-people>
+					<tr>
+						<td><span class="p-column-title"></span>
+							{{people.name}}
+						</td>
+						<td><span class="p-column-title"></span>
+							{{people.height}}
+						</td>
+						<td><span class="p-column-title"></span>
+							{{people.mass}}
+						</td>
+					
+						<td><span class="p-column-title"></span>
+							{{people.created | date: 'dd/mm/yyyy'}}
+						</td>
+						<td><span class="p-column-title"></span>
+							{{people.edited | date: 'dd/mm/yyyy'}}
+						</td>
+						<td>
+							<div class="actions-buttons">
+								<button pButton pRipple icon="pi pi-info-circle" class="p-button-rounded p-button-info p-mr-2" (click)="detailsPeople(people)"></button>
+							</div>
+						</td>
+					</tr>
+				</ng-template>
+				<ng-template pTemplate="summary">
+					<div class="p-d-flex p-ai-center p-jc-between">
+						No total há {{peoples ? peoples.length : 0 }} pessoas cadastradas.
+					</div>
+				</ng-template>
+			</p-table>
+		</div>
+	    <p-dialog [(visible)]="peopleDetails" [style]="{width: '580px'}" header="{{dialogTitleDetail}}" [modal]="true" styleClass="p-fluid details-contrato">
+			<ng-template pTemplate="content">
+				<div class="p-field">
+					<div class="soldado">
+						<div class="bg-gedi"></div>
+						<div class="details">
+						    <p><span>Nome:</span> {{people.name}}</p>
+						    <p><span>Medida (metros):</span> {{people.height}}</p>
+						    <p><span>Criação:</span> {{people.created | date: 'dd/mm/yyyy'}}</p>						
+						    <p><span>Edição:</span> {{people.edited | date: 'dd/mm/yyyy'}}</p>						
+					    </div>
+				   </div>
+			    </div>
+			</ng-template>	
+			<ng-template pTemplate="footer">
+				<button pButton pRipple label="fechar" icon="pi pi-times" class="p-button-text" (click)="hideDialogDetails()"></button>
+			</ng-template>
+		</p-dialog>
+		<p-confirmDialog [style]="{width: '450px'}" acceptLabel="Sim" rejectLabel="Não" header="Confirmação"></p-confirmDialog>
+	</div>
+</div>

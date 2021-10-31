@@ -1,4 +1,4 @@
-# ROS Web
+# Star Wars - Listagem e descrição 
 
 This project is in [Angular CLI](https://github.com/angular/angular-cli) version 11.0.0.
 
@@ -29,6 +29,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Running in Docker
 
 #Comandos para executar o Dockerfile
-#docker build -t ros-frontend .
-#docker build --no-cache --build-arg ENV=dev --build-arg PORT=4200 --build-arg STAGE=dev  --build-arg URL_API=https://api-ros-dev.transformacaodigitalspassu.com.br:25100 --build-arg ImgNode=node:14.17.1 --build-arg ImgNginx=nginx:1.21 -t ros-frontend .
-#docker run -d -p 4200:80 --name rosfrontend ros-frontend
+#docker build -t test-starwars .
+#docker build --no-cache --build-arg ENV=dev --build-arg PORT=4200 --build-arg STAGE=dev  --build-arg URL_API=https://swapi.dev/api --build-arg ImgNode=node:14.17.1 --build-arg ImgNginx=nginx:1.21 -t starwars .
+#docker run -d -p 4200:80 --name starwars test-starwars

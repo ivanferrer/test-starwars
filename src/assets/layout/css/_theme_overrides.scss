@@ -1,19 +1,15 @@
 /****
-DEFAULT OVERRIDE THEME :: LAYOUT-LIGHTGREEN :: layout ROS 
+DEFAULT OVERRIDE THEME :: LAYOUT-LIGHTGREEN :: layout Starwars 
 ***/
 .p-button.p-button-secondary, .p-buttonset.p-button-secondary > .p-button, .p-splitbutton.p-button-secondary > .p-button {
     background-color: #75787B !important;
-  }
+}
   
-  /*Mudando a cor do p-button-info para uma cor da petro*/
-  .p-button.p-button-info, .p-buttonset.p-button-info > .p-button, .p-splitbutton.p-button-info > .p-button {
-    //color: #ffffff;
+.p-button.p-button-info, .p-buttonset.p-button-info > .p-button, .p-splitbutton.p-button-info > .p-button {
     background-color: #3DDAFF !important;
-    //background: #75787B;
-    //border: 1px solid #75787B;
-  }
+}
 
-  .layout-topbar {
+.layout-topbar {
     min-height: 120px;
 }
 .layout-topbar-logo {
@@ -23,14 +19,17 @@ DEFAULT OVERRIDE THEME :: LAYOUT-LIGHTGREEN :: layout ROS
     top: 0;
     border-radius: 0 0 10px 10px;
 }
+
 .layout-topbar .layout-topbar-logo {
     padding: 12px;
     background: black;
 }
+
 .layout-wrapper {
     padding: 0 50px 25px;
     border-radius: 0 0 10px 10px;
 }
+
 .pi.pi-user.icon.avatar {
    &::before {
         color: #b7c7af;
@@ -44,6 +43,7 @@ DEFAULT OVERRIDE THEME :: LAYOUT-LIGHTGREEN :: layout ROS
         padding-top: 8px;
     }
 }
+
 .layout-topbar .layout-topbar-menu > li.user-profile > ul > li.profile-detail {
     border-bottom: 1px dotted #ccc;
 }
@@ -62,12 +62,15 @@ DEFAULT OVERRIDE THEME :: LAYOUT-LIGHTGREEN :: layout ROS
     padding: 0;
     border-radius: 0 0 10px 10px;
 }
+
 .layout-actionbar {
     border-radius: 0 10px 0 0;
 }
+
 .layout-actionbar {
     min-height: 52px;
 }
+
 .separe-breadcrumb {
     color: #75787B;
     font-size: 11px;
@@ -81,11 +84,7 @@ DEFAULT OVERRIDE THEME :: LAYOUT-LIGHTGREEN :: layout ROS
     color: #495057;
     padding: 0 1.5rem 1.5rem 1.5rem;
 }
-// .cad-servico.p-dialog .p-dialog-content {
-//     background: #ffffff;
-//     color: #495057;
-//     padding: 0 1.5rem 15rem 1.5rem;
-// }
+
 .p-invalid {
     color: rgb(112, 4, 4);
     display: block;
@@ -126,28 +125,7 @@ DEFAULT OVERRIDE THEME :: LAYOUT-LIGHTGREEN :: layout ROS
         margin-left: 208px;
     }
 } 
-.ferramenta {
-    position: relative;
-    span {
-        color: #75787B;
-    }
-    font-size: 15px;
-    .details {
-        margin-left: 120px;
-    }
-    .divisor {
-        border-bottom: 1px solid #ececec;
-        margin-bottom: 10px;
-        margin-top: 10px;
-    }
-    .bg-ferramenta {
-        background: url(../images/ferramentas.png) no-repeat;
-        position: absolute;
-        width: 100px;
-        height: 100px;
-        background-size: contain;
-    }
-} 
+
 .p-datatable .p-datatable-thead > tr > th.contrato {
     width:25%;
 }
@@ -166,7 +144,7 @@ DEFAULT OVERRIDE THEME :: LAYOUT-LIGHTGREEN :: layout ROS
 }
 
 .input-uppercase:-ms-input-placeholder { /* Internet Explorer 10-11 */
-text-transform: initial;
+    text-transform: initial;
 }
 
 .input-uppercase::placeholder {
@@ -199,7 +177,7 @@ button.ghost {
     }
 }
 .login-body {
-    background: url(../images/pages/petro-bg-2.jpg);
+    background: url(../images/sky_stars.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;

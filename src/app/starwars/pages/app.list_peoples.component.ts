@@ -109,6 +109,9 @@ export class AppListPeoplesComponent implements OnInit {
 
     toggleAttributes() {
 
+        if (this.selectedPeoples.length == 0) {
+            this.isHiddenAttributes = true;
+        }
         this.isHiddenAttributes = !this.isHiddenAttributes;
         this.peoples.map(
             val => {
